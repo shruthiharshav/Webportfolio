@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webportfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+</head>
+
+<body>
+    <!--Top Navigation Menu-->
+    <div class="topnav">
+        <a class="active">SHRUTHI</a>
+        <!--Navigation Links-->
+        <div id="myLinks">
+            <a href="index.html">Hem</a>
+            <a href="about.html">Om mig</a>
+            <a href="skills.html">Kunskap</a>
+            <a href="contact.html">Kontakt</a>
+            <a href="portfolio.html">Portfölj</a>
+            <a href="reference.html">Referens</a>
+        </div>
+        <!--Hamburger Icon-->
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+
+
+    <section class="contact-section">
+        <h1 class="contact-heading">Kontakt</h1>
+        <form action="https://formsubmit.co/shruthiharshav@gmail.com" method="POST">
+            <!--<div class="name-row">-->
+            <div>
+                <p><label for="fname">Förnamn</label>
+                    <input type="text" id="fname" name="firstname" required minlength="2" pattern="[A-Za-zÅÄÖåäö\- ]+"
+                        placeholder="skriv ditt förnamn">
+                </p>
+            </div>
+
+
+            <div>
+                <p><label for="lname">Efternamn</label>
+                    <input type="text" id="lname" name="lname" required minlength="2" pattern="[A-Za-zÅÄÖåäö\- ]+"
+                        placeholder="Skriv ditt efter namn">
+                </p>
+            </div>
+
+            <div class="email-field">
+                <label for="email">E-Post</label>
+                <input type="email" id="email" name="email" required placeholder="name@gmail.com" oninvalid="this.setCustomValidity('Fyll i e-postadressen')">
+                <span class="validity"><i class="fa-solid fa-check"></i></span>
+            </div>
+
+            <div>
+                <label for="message">Meddelande</label>
+                <textarea id="message" name="message" rows="5" placeholder="Skriv ditt meddelande här" required
+                    minlength="20" maxlength="100"></textarea>
+            </div>
+            <div class="submitbutton">
+                <p><button onclick="myfunction()" type="submit">Send</button></p>
+            </div>
+
+
+            <!--Spinner--
+            <div class="spinner">
+                <div class="spinner-item"></div>
+                <div class="spinner-item"></div>
+                <div class="spinner-item"></div>
+                <div class="spinner-item"></div>
+            </div>-->
+
+            
+
+     
+        </form>
+
+               <!---- <section>
+        <div class="contactme">
+            <a href="mailto:shruthiharshav@gmail.com" target="_blank">
+                <i class="fa-solid fa-envelope"></i></a>
+            <a href="https://github.com/shruthiharshav" target="_blank">
+                <i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/shruthi-periasamy-7180b465/" target="_blank">
+                <i class="fa-brands fa-square-linkedin"></i></a>
+        </div>
+    </section>-->
+
+    </section>
+
+   
+
+
+    <script>
+        function myFunction() {
+            alert("Thank you for sending the message")
+        }
+    </script>
+
+<!----
+    <script>
+
+        async function getData() {
+            try {
+                showSpinner();
+                const response = await fetch('https://api.example.com/data');
+                const data = await response.json();
+                console.log(data);
+            } catch (error) {
+                console.error(error);
+            } finally {
+                hideSpinner();
+            }
+        }
+    </script>-->
+
+
+ <script>
+            function myFunction()
+            {
+            var x = document.getElementById("myLinks");
+            if (x.style.display === "block") {
+            x.style.display = "none";
+            } else {
+            x.style.display = "block";
+            }
+            } 
+        </script>
+
+</body>
+
+</html>

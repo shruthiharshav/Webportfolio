@@ -1,0 +1,956 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+section{
+    padding: 60px 0;
+}
+
+:root {
+  --primary-color: #b3c5c0; 
+  --background-color: #f5f5f5;
+  --navbar-color:#b3c5c0;
+  --footer-color:#2f3e3b ;
+  --primary-text-color:#F4F7F6;
+  --secondary-text-color:black;
+  --main-font:'Times New Roman', Times, serif;
+  --main-font-size: 16px;
+  --hero-height: clamp(600px, 80vh, 1200px);
+  
+ 
+}
+
+body,html
+{
+    /*background-color:#dfe6e3;*/
+    background-color: var(--background-color);
+    width: 100%;
+    font-family: var(--main-font);
+    color:  azure;
+    font-size: var(--main-font-size); /*clamp(14px, 1.2vw, 18px); */
+    scroll-behavior: smooth;  
+    overflow: visible;
+}
+.container {
+width: min(90%, 1100px);
+margin: auto;
+padding: 20px;
+box-sizing: border-box;
+}
+
+
+.hero{
+    width: 100%;
+    margin-top: 80px;
+    border: 3px solid red;
+    min-height: var(--hero-height);
+    display: grid;
+    
+}
+
+.hero-image
+ {
+
+    background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url("Images/shruthiworking.jpg");
+    height: 600px;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top:0;
+    align-items: center;
+    text-align: center;
+    padding-top: 0px;
+    padding-bottom: 260px;
+    height: auto;
+    display: grid;
+}
+
+.hero-text
+{
+    color:black;
+    font-family: var(--main-font);
+    text-align: center;
+    padding-bottom: 10%;
+    align-items: center;
+
+}
+
+
+.hero-text button
+{
+
+  border:#2f3e3b;
+  outline: 0;
+  display: inline-block;
+  padding: 10px 25px; /* top, left for my understanding */
+  color: white;
+  background-color:#83883e;
+  text-align: center;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 12px;
+  margin-top: 220px;
+}
+
+.hero-text button:hover
+{
+  background-color:darkolivegreen;
+  color: white;
+
+}
+.header
+{
+text-align: right;
+font-family: Georgia;
+
+}
+.grid-container
+{
+background-color:#BCA3E3;
+display: grid;
+grid-template-columns: 1fr;
+grid-template-rows: repeat(9, auto);
+gap: 5px;
+background-color:#111111;
+color:aliceblue;
+padding: 20px;
+
+text-align: center;
+
+}
+
+/*Style the navigation */
+
+.topnav
+{
+    overflow: hidden;
+    background-color: var(--navbar-color);
+    position: relative;
+}
+
+/* this will hide the links inside the navigation */
+.topnav #myLinks
+{
+    display: none;
+    overflow: hidden;
+
+}
+
+
+.topnav a
+{
+    color: var(--text-color);
+    padding:14px 16px;
+    text-decoration: none;
+    font-size: larger;
+    display: block;
+}
+
+.topnav a.icon{
+    background: var(--navbar-color);
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.topnav a:hover{
+    background-color: var(--footer-color);
+    color: var(--text-color);
+}
+
+.topnav a.active
+{
+    background-color: var(--navbar-color);
+    color: var(--text-color);
+    font-size: larger;
+}
+
+
+.introduction
+{
+background-color: var(--background-color);   /* This is the about page */
+text-align: center;
+justify-content: center;
+display: flex;
+align-items: center;
+color:var(--secondary-text-color);
+padding: 40px 20px;
+}
+
+.introduction-container
+{
+    max-width: 100%;
+    width: 100%;
+
+  
+}
+
+/* Skills */
+.container2
+{
+    padding-top: 40px;
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-bottom: 200px;
+
+}
+
+.header-section
+{
+    text-align: center;
+    padding-bottom: 100px;
+    padding-top: 0;
+}
+
+.skillscontainer
+{
+
+
+background-color: #f1f1f1;
+gap: 20px;
+width: 100%;
+justify-content: center;
+border-radius: 10px;
+overflow: hidden;
+color:#333;
+margin-bottom: 15px;
+font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/*
+.skill-items
+{
+    
+  flex: 1 1 150px;     
+  max-width: 200px;   
+  text-align: center;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f5f5f5;
+} */
+
+
+
+.skills{
+  width: 90%;
+  height: 100%;
+  text-align: right;
+  padding: 8px  10px; 
+  height: 30px;
+  line-height: 30px;
+  animation: fillbar 2s ease-in-out;
+ 
+  color: black;
+  transition: width 0.2s ease-in-out;
+}
+
+h1{
+    color: #333;
+}
+p{
+    color:#333;
+}
+
+
+.csharp{width: 90%; background-color: #7aa89a;}
+.sql{width: 90%; background-color: #7aa89a;}
+.asp{width: 90%; background-color: #7aa89a;}
+.html{width: 90%; background-color: #7aa89a;}
+.css{width: 90%; background-color: #7aa89a;}
+.javascript{width: 90%; background-color: #7aa89a;}
+
+/*animation */
+@keyframes fillbar {
+  from {
+    width: 0;
+  }
+} 
+
+.logo
+{
+    width: 2.5em;
+    height: auto;
+    vertical-align: middle;
+}
+
+.skills:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+
+.contact-section
+{
+    margin-top: 5px;
+    margin-bottom: 10px;
+    position: relative;
+    color: black;
+    margin-left: 25%;
+    margin-right: 230px;
+ 
+    
+}
+
+.contact-heading
+{
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    margin-left: 23%;
+    margin-right: 30%;
+}
+
+form div
+{
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+input + span {
+    padding-right: 30px;
+}
+
+input, textarea{    /* text area of the boxes */
+    width: 100%;
+    padding: 10px;
+    box-sizing:border-box;
+    
+    
+}
+
+
+.contact-section button{
+  background-color: #7aa89a;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-section button:hover{
+  opacity: 0.9;
+  color:#2f3e3b;
+}
+
+.validity
+{
+    color:green;
+}
+
+.submitbutton
+{
+    text-align: center;
+}
+
+
+textarea::placeholder
+{
+    font-style: italic;
+    
+}
+
+
+
+/* portfolio section */
+
+
+.portfolio-heading
+{
+    text-align: center;
+    font-size: x-large;
+    color: #2f3e3b;
+    margin-top: 60px;
+    gap: 20px;
+    
+}
+
+.portfolio-container text{
+    text-align: center;
+    
+}
+
+.portfolio-container
+{
+margin-top: 60px;
+background-color: var(--background-color);/*#f1f1f1; /*#CFFFE5;*/ /*#f8d6b0;*/
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 0px; /*0px*/
+color: black;
+margin-left: 35px;
+margin-right: 35px;
+
+}
+
+
+.card
+{
+   
+    height: 360px;
+    width: 300px;
+    border-radius: 2px;
+    border: 20px solid var(--navbar-color);
+    background-color: var(--background-color);
+
+}
+
+.card img
+{
+    width: 100%;
+    height: 200px;
+    border-radius: 4px;
+
+}
+
+
+/* Reference */
+/* Avatar */
+
+.avatar
+{
+    vertical-align: middle;
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    margin-left: 190px;
+    margin-right: 120px;
+    box-shadow: 2px 2px 2px 2px #7aa89a;
+}
+.heading
+{
+color: #333;
+text-align: center;
+margin-top: 90px;
+
+}
+
+.container
+{
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+    
+}
+
+
+.reference-container
+{
+display: flex;
+flex-direction: column;
+grid-template-columns: repeat(2, 1fr);
+flex-wrap:wrap;
+
+max-width: 500px;
+width: 100%;
+align-items: center;
+margin-top: 70px;
+margin: 20px auto;
+/*margin-left: 150px;
+margin-right: 150px;*/
+text-align: justify;
+border: 3px solid #7aa89a;
+box-shadow: 2px 2px 2px 2px #7aa89a;
+margin: 16px 0;
+
+padding-left: 5px;
+padding-right: 50px;
+border-radius: 6%;
+
+background-color: var(--background-color);
+
+}
+
+.dot
+{
+    cursor: pointer;
+    height:10px;
+    width: 10px;
+   
+    display:inline-block;
+    margin: 0 5px; /* small space between dots */
+    background-color: var(--navbar-color);
+    border-radius: 50%;
+    transition: background-color 0.6s ease;
+}
+
+
+.slideshow-section
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.slide-image{
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+.slide
+{
+    width: 100%;
+    height: auto;
+}
+   
+
+.active, .dot:hover
+{
+    background-color: var(--navbar-color);
+}
+
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On Mobile*/
+@media only screen and (max-width: 600px) {
+
+    .dots{
+        gap: 5px;
+    }
+    .dot
+    {
+        height: 8px;
+        width: 8px;
+    }
+  /*.prev, .next,.text {font-size: 14px;}*/
+}
+
+
+/* works on Tablet */
+
+@media (max-width: 768px)
+{
+    .dots {
+        gap: 4px;
+    }
+
+    .dot
+    {
+        height: 8px;
+        width: 8px;
+    }
+}
+    
+.dots {
+  display: flex;
+  justify-content: center; /* center horizontally */
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/*.reference container{
+    float: left;
+  margin-right: 20px;
+  border-radius: 50%;
+}*/
+
+
+
+
+/*footer section*/
+.footer
+{
+background-color: var( --footer-color);
+text-align: center;
+color: var( --text-color);
+
+}
+
+.copyright
+{
+    color: var( --text-color);
+    text-align: center;
+    padding-bottom: 5px;
+    padding-top: 30px;
+}
+
+.footer-img
+{
+    background-color:#2f3e3b; 
+    color: var( --text-color);
+    height: 90px;
+    padding-top: 5px;
+   
+}
+
+.footer-img a :hover{
+
+    color: #b19cd9;
+    transform: scale(1.5,1.5);
+   /* var(--primary-color); */
+}
+
+
+.contact
+{
+background-color:#f8d6b0;
+color:#333;
+}
+
+.contactme {
+    display: flex;               
+    justify-content: center;    
+    align-items: center;        
+    gap: 10px;                   
+    margin: 10px 0;            
+}
+/*Spinner*/ /*This is the container box which has the 3 dots */
+.spinner
+{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+}
+
+.spinner.active {
+  display: block;         
+}
+
+/*Spinner items*/
+/*
+.spinner-item
+{
+
+    position: abosulte;
+    border-radius: 50%;
+    background-color: var(--footer-color);
+    animation: spin 1s linear infinite;
+}
+
+.spinner-item:nth-child(1)
+{
+    top: 15px;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    animation-delay: -0.45s;
+}
+
+.spinner-item:nth-child(2)
+{
+       top: 15px;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    animation-delay: -0.3s;
+
+}
+
+.spinner-item:nth-child(3)
+{
+    top: 15px;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    animation-delay: -0.15s;
+
+}
+
+.spinner-item:nth-child(4)
+{
+    top:15px;
+    left:0;
+    width:10px;
+    height:10px;
+    animation-delay: 0s;
+}
+
+@keyframes spin{
+    0% {
+        transform:rotate(0deg);
+    }
+
+    100%
+    {
+        transform:rotate(360deg);
+    }
+} */
+.burger
+{
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+}
+
+.burger span{
+    width: 25px;
+    height:3px;
+    background:white;
+    margin:4px 0;
+}
+
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align:middle;}
+
+.slideshow-container {
+    max-width: 1000px;
+    width: 90%;
+    margin: 0 auto; 
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next{
+  
+  right:0;
+  left:0;
+
+  border-radius: 3px 0 0 3px;
+  
+}
+
+
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: #f1f1f1;
+  padding-left: 100px;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color:#333;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  text-align: center;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.slide{
+
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: 30px 0;
+
+}
+
+.slideimage
+{
+    width: 40px;
+    border-radius: 30px;
+
+    
+}
+
+.slidetext1,
+.slidetext2,
+.slidetext3 {
+    text-align: center;  
+}
+
+
+
+.mySlides.fade img
+{
+    margin: auto;
+    display: block;
+}
+
+.mySlides img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    max-width: 100%;
+    height: auto;
+}
+
+.slidealignment
+{
+    text-align: right;
+}
+
+/*.active, .dot:hover {
+  background-color: #717171;
+}*/
+
+
+skills-item1
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    margin: 10px auto;
+    padding: 10px;
+}
+
+.skills
+
+{
+    text-align: center;
+}
+
+
+@media (max-width <= 600px)
+{
+    .skill-items{
+        flex: 1 1 45%;
+    }
+}
+
+@media (max-width <= 768px)
+{
+    .skill-items
+    {
+        flex: 1 1 75%;
+    }
+}
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 3s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 600px) {
+  .prev, .next,.text {font-size: 14px}
+}
+
+
+/* works on Tablet */
+
+@media (max-width: 768px)
+{
+    .prev, .next {
+        font-size: 16px;
+    }
+
+}
+
+.mySlides p {
+    text-align: center;      
+    text-justify: auto;
+    margin: 10px auto;        
+    max-width: 700px;         
+    line-height: 1.6;        
+}
+
+.email-field .validity {
+    display: none;        
+    color: green;
+    margin-left: 5px;
+}
+
+.email-field input:valid + .validity {
+    display: inline-block;     
+}
+
+#weather {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.weatherwidget {
+  width: 260px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #74ebd5, #acb6e5);
+  font-family: Arial, sans-serif;
+  text-align: center;
+  color: #222;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.weatherwidget h3 {
+  margin: 10px 0;
+}
+
+.weather-icon {
+  width: 80px;
+  height: 80px;
+}
+
+.weather-main {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.weather-desc {
+  text-transform: capitalize;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.weather-card p {
+  margin: 4px 0;
+}

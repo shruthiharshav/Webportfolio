@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webportfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="webportfolio.js"></script>
+    <script src="https://kit.fontawesome.com/3eb723f157.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" sizes="32x32" href="Icons/S.png">
+      <script src="weather.js" defer></script>
+  
+  
+</head>
+
+<body> 
+    
+    <!--Top Navigation Menu-->
+    <div class="topnav">
+        <a class="active">SHRUTHI</a>
+        <!--Navigation Links-->
+        <div id="myLinks">
+            <a href="index.html">Hem</a>
+            <a href="about.html">Om mig</a>
+            <a href="skills.html">Kunskap</a>
+            <a href="contact.html">kontakt</a>
+            <a href="portfolio.html">Portfölj</a>
+            <a href="reference.html">Referens</a>
+        </div>
+        <!--Hamburger Icon-->
+         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+         <i class="fa fa-bars"></i>
+         </a>
+    </div>
+
+
+        <div class="hero-image">
+        <div class="hero-text">
+           
+              <a href="Documents/SHRUTHI PERIASAMY  CV updated .Net.pdf" 
+               class="btn content-download button-main button-scheme"><button>
+                Download CV<i class="fa-solid fa-download"></i></button></a>
+
+        </div>
+    </div>
+
+
+    <div id="weather">
+
+    </div>
+
+    <div class="footer">
+        <h3>Följ mig:</h3>
+        <div class="footer-img">
+            <a href="https://github.com/shruthiharshav"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/shruthi-periasamy-7180b465/"><i class="fa-brands fa-square-linkedin"></i></a>
+            <p class="copyright">&copy; Copyrights <span><strong>SHRUTHI Alla rättigheter förbehållna</strong></span></p>
+        </div>
+
+
+        <script>
+            function myFunction()
+            {
+            var x = document.getElementById("myLinks");
+            if (x.style.display === "block") {
+            x.style.display = "none";
+            } else {
+            x.style.display = "block";
+            }
+            } 
+        </script>
+    
+</body>
+
+</html>

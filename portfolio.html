@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfölj</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="webportfolio.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!--Top Navigation Menu-->
+    <div class="topnav">
+        <a class="active">SHRUTHI</a>
+        <!--Navigation Links-->
+        <div id="myLinks">
+            <a href="index.html">Hem</a>
+            <a href="about.html">About</a>
+            <a href="skills.html">Kunskap</a>
+            <a href="contact.html">Kontakt</a>
+            <a href="portfolio.html">Portfölj</a>
+            <a href="reference.html">Referens</a>
+        </div>
+        <!--Hamburger Icon-->
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+
+    <section>
+        <h3 class="portfolio-heading">Min Portfölj</h3>
+        <div class="portfolio-container">
+            <div class="card">
+                <img src="Icons/Project images/iphone screenshot.jpg" alt="iphone max" width="280px">
+                <a href="https://shruthiharshav.github.io/HTML-Project/" targets="_blank">Iphone Website</a>
+                <p>Iphone 17 Pro Website</p>
+                <p> <a href="https://shruthiharshav.github.io/Apple-Website/"><button style='font-size:18px'>GitHub<i
+                                class="fa-brands fa-github"></i></button></a></p>
+            </div>
+            <div class="card">
+                <img src="Icons/Project images/zooscreenshot.png" alt="tiger" width="280px">
+                <a href="https://shruthiharshav.github.io/HTML-Project/" targets="_blank">Zoo Website</a>
+                <p>Systementor Zoo Website</p>
+                <p> <a href="https://shruthiharshav.github.io/HTML-Project/"><button style='font-size:18px'>GitHub<i
+                                class="fa-brands fa-github"></i></button></a></p>
+            </div>
+
+            <div class="card">
+                <img src="Icons/Project images/unloading.jpg" alt="project coming soon" width="280px">
+                <p>kommer snart</p>
+            </div>
+
+            <div class="card">
+                <img src="Icons/Project images/unloading.jpg" alt="project coming soon" width="280px">
+                <p>kommer snart</p>
+            </div>
+
+            <script>
+                function myFunction() {
+                    var x = document.getElementById("myLinks");
+                    if (x.style.display === "block") {
+                        x.style.display = "none";
+                    } else {
+                        x.style.display = "block";
+                    }
+                } 
+            </script>
+
+</body>
+
+</html>
