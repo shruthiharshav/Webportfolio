@@ -49,7 +49,7 @@ box-sizing: border-box;
     border: 3px solid red;
     min-height: var(--hero-height);
     display: grid;
-    
+    box-shadow: 2px 2px 2px 2px #7aa89a;
 }
 
 .hero-image
@@ -95,6 +95,7 @@ box-sizing: border-box;
   font-size: 20px;
   border-radius: 12px;
   margin-top: 220px;
+  margin-right: 180px;
 }
 
 .hero-text button:hover
@@ -131,6 +132,7 @@ text-align: center;
     overflow: hidden;
     background-color: var(--navbar-color);
     position: relative;
+    box-shadow: 2px 2px 2px 2px #7aa89a;
 }
 
 /* this will hide the links inside the navigation */
@@ -221,6 +223,7 @@ overflow: hidden;
 color:#333;
 margin-bottom: 15px;
 font-family: Georgia, 'Times New Roman', Times, serif;
+box-shadow: 2px 2px 2px 2px #7aa89a;
 }
 
 /*
@@ -333,6 +336,7 @@ input, textarea{    /* text area of the boxes */
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
+  box-shadow: 2px 2px 2px 2px #7aa89a;
 }
 
 .contact-section button:hover{
@@ -387,6 +391,7 @@ gap: 0px; /*0px*/
 color: black;
 margin-left: 35px;
 margin-right: 35px;
+box-shadow: 2px 2px 2px 2px #7aa89a;
 
 }
 
@@ -395,7 +400,7 @@ margin-right: 35px;
 {
    
     height: 360px;
-    width: 300px;
+    /*width: 300px;*/
     border-radius: 2px;
     border: 20px solid var(--navbar-color);
     background-color: var(--background-color);
@@ -410,19 +415,43 @@ margin-right: 35px;
 
 }
 
+@media(max-width: 600px) {
+
+    .portfolio-container{
+        margin: 20px;
+    }
+
+    .card
+    {
+        max-width: 100%;
+    }
+    
+}
+
 
 /* Reference */
 /* Avatar */
 
 .avatar
 {
-    vertical-align: middle;
+    display: block;
+    /*vertical-align: middle;*/
     border-radius: 50%;
     width: 90px;
     height: 90px;
-    margin-left: 190px;
-    margin-right: 120px;
+    margin: 20px auto;
+    /*margin-left: 190px;
+    margin-right: 120px;*/
     box-shadow: 2px 2px 2px 2px #7aa89a;
+}
+
+@media (max-width:600px)
+{
+    .avatar
+    {
+        width: 70px;
+        height: 70px;
+    }
 }
 .heading
 {
