@@ -31,15 +31,13 @@ Steger för utvecklare
 - Run project
 
 ## Bidrag
-Rules for contributions:
-- Create issue first
-- Submit pull request
+Reglar för bidrag
+- Skapa issue först
+- Skicka pull request
 
 ##Vad man kan göra innan bidrag eller byta koden?
 Man kan skapa en problem innan de skickar
 också skriva lite detaljärad meddlande om commit.
 
-
-
-## Known Issues
-- List bugs or limitations
+##Vad man ska göra om det kända problem
+Man kan lista buggar utan att andra om det är en problem 
