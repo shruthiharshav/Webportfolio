@@ -37,7 +37,7 @@
             <!--<div class="name-row">-->
             <div>
                 <p><label for="fname">Förnamn</label>
-                    <input type="text" id="fname" name="firstname" required minlength="2" pattern="[A-Za-zÅÄÖåäö\- ]+"
+                    <input type="text" id="fname" name="firstname" required minlength="2" pattern="[A-Za-zÅÄÖåäö\- ]+" oninvalid="this.setCustomValidity('Fyll i ditt förnamn')
                         placeholder="skriv ditt förnamn">
                 </p>
             </div>
@@ -45,7 +45,7 @@
 
             <div>
                 <p><label for="lname">Efternamn</label>
-                    <input type="text" id="lname" name="lname" required minlength="2" pattern="[A-Za-zÅÄÖåäö\- ]+"
+                    <input type="text" id="lname" name="lname" required minlength="2" pattern="[A-Za-zÅÄÖåäö\- ]+" oninvalid="this.setCustomValidity('Fyll i ditt efternamn')
                         placeholder="Skriv ditt efter namn">
                 </p>
             </div>
