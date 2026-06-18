@@ -42,18 +42,30 @@
         <form action="https://formsubmit.co/shruthiharshav@gmail.com" method="POST">
             <!--<div class="name-row">-->
             <div>
+
                 <p><label for="fname" data-en="FirstName" data-sv="Förnamn"></label>
                     <input type="text" id="fname" name="firstname" required minlength="2" pattern="[A-Za-zÅÄÖåäö\- ]+"
                         data-placeholder-en="Write your firstname"data-placeholder-sv="Skriv ditt förnamn">
+
+                <p><label for="fname">Förnamn</label>
+                    <input type="text" id="fname" name="firstname" required minlength="2" pattern="[A-Za-zÅÄÖåäö\- ]+" oninvalid="this.setCustomValidity('Fyll i ditt förnamn')
+                        <placeholder "skriv ditt förnamn">
+
                 </p>
             </div>
 
 
             <div>
+
                 <p><label for="lname" data-en="AfterName" data-sv="Efternamn"></label>
                     <input type="text" id="lname" name="lname" required minlength="2" pattern="[A-Za-zÅÄÖåäö\- ]+"
                         data-placeholder-sv="Skriv ditt efter namn"
                         data-placeholder-en="Write your efter name">
+
+                <p><label for="lname">Efternamn</label>
+                    <input type="text" id="lname" name="lname" required minlength="2" pattern="[A-Za-zÅÄÖåäö\- ]+" oninvalid="this.setCustomValidity('Fyll i ditt efternamn')
+                       < placeholder "Skriv ditt efter namn">
+
                 </p>
             </div>
 
