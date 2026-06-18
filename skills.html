@@ -28,10 +28,17 @@
             <i class="fa fa-bars"></i>
         </a>
     </div>
+    
+    <!--language switch-->
+   
+<div class="lang-flags">
+    <img src="https://flagcdn.com/w40/gb.png" alt="English" onclick="setLanguage('en')" id="enFlag">
+    <img src="https://flagcdn.com/w40/se.png" alt="Swedish" onclick="setLanguage('sv')" id="svFlag">
+</div>
 
     <section class="container2">
         <div class="skills-section">
-            <h1 class="header-section">Min kunskap</h1>
+            <h1 class="header-section" data-en="My Skills" data-sv="Min Kunskap">Min kunskap</h1>
             <p><i class="fa-solid fa-c"></i><i class="fa-solid fa-hashtag"></i>CSharp</p>
             <!--<p><img src="Csharp.png" alt="C# Logo" class="logo">CSharp</p><br>-->
             <div class="skillscontainer">
@@ -59,6 +66,11 @@
                 <div class="skills javascript">70%</div>
             </div>
 
+            <p><i class="fa-brands fa-microsoft"></i>Azure</p>
+            <div class="skillscontainer">
+                <div class="skills azure">90%</div>
+            </div>
+
 
             <script>
                 function myFunction() {
@@ -71,6 +83,55 @@
                 } 
             </script>
 
+  
+      <script>
+function setLanguage(lang) {
+    document.querySelectorAll("[data-en]").forEach(el => {
+        el.innerText = el.getAttribute("data-" + lang);
+    });
+
+    localStorage.setItem("lang", lang);
+
+    const slider = document.querySelector(".slider");
+
+    if (lang === "en") {
+        slider.style.left = "4px";
+    } else {
+        slider.style.left = "46px";
+    }
+}
+
+window.onload = function () {
+    setLanguage(localStorage.getItem("lang") || "en");
+};
+</script>
+      <script>
+        
+function setLanguage(lang) {
+    // change text
+    document.querySelectorAll("[data-en]").forEach(el => {
+        el.innerText = el.getAttribute("data-" + lang);
+    });
+
+    localStorage.setItem("lang", lang);
+
+    // remove active styles
+    document.getElementById("enFlag").classList.remove("lang-active");
+    document.getElementById("svFlag").classList.remove("lang-active");
+
+    // set active flag
+    if (lang === "en") {
+        document.getElementById("enFlag").classList.add("lang-active");
+    } else {
+        document.getElementById("svFlag").classList.add("lang-active");
+    }
+}
+
+// load saved language
+window.onload = function () {
+    const lang = localStorage.getItem("lang") || "en";
+    setLanguage(lang);
+};
 
             <!--<script>
     window.addEventListener("DOMContentLoaded", () => {

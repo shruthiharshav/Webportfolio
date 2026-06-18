@@ -8,23 +8,150 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+<nav class="modern-navbar">
+    <div class="nav-container">
+
+        <!-- Logo -->
+        <div class="logo">SHRUTHI</div>
+
+        <!-- Navigation Links -->
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="#Home">Hem</a></li>
+            <li><a href="#about">Om mig</a></li>
+            <li><a href="#knowledge">Kunskap</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+            <li><a href="#portfolio">Portfölj</a></li>
+            <li><a href="#reference">Referens</a></li>
+        </ul>
+
+<!----
+        <div class="lang-switch">
+            <span id="enBtn" onclick="setLanguage('en')">EN</span>
+            <span>|</span>
+            <span id="svBtn" onclick="setLanguage('sv')">SV</span>
+        </div>-->
+        <!-- Hamburger -->
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </div>
+</nav>
+    
     <!--Top Navigation Menu-->
-    <div class="topnav">
+     <!--<div class="topnav"> // i hided this navabar recently
         <a class="active">SHRUTHI</a>
         <!--Navigation Links-->
-        <div id="myLinks">
-            <a href="index.html">Hem</a>
-            <a href="about.html">Om mig</a>
-            <a href="skills.html">Kunskap</a>
-            <a href="contact.html">Kontakt</a>
-            <a href="portfolio.html">Portföljo</a>
-            <a href="reference.html">Referens</a>
+        <!--<div id="myLinks">
+            <a href="#Home">Hem</a>
+            <a href="#about">Om mig</a>
+            <a href="#knowledge">Kunskap</a>
+            <a href="#contact">Kontakt</a>
+            <a href="#portfolio">Portföljo</a>
+            <a href="#reference">Referens</a>
         </div>
         <!--Hamburger Icon-->
-         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <!---- <a href="javascript:void(0);" class="icon" onclick="myFunction()">
          <i class="fa fa-bars"></i>
          </a>
-    </div>
+    </div>-->
 
 </body>
 </html>
+
+
+<script>
+    
+document.addEventListener("DOMContentLoaded", () => {
+
+    const langs = document.querySelectorAll(".lang");
+
+    langs.forEach(lang => {
+        lang.addEventListener("click", () => {
+
+            // Remove active class from all
+            langs.forEach(l => l.classList.remove("active"));
+
+            // Add active class to clicked language
+            lang.classList.add("active");
+
+            console.log("Selected:", lang.dataset.lang);
+
+            // Later we'll switch page language here
+        });
+    });
+
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    const themeBtn = document.getElementById("themeBtn");
+    const icon = themeBtn.querySelector("i");
+
+    function updateIcon() {
+        if(document.body.classList.contains("dark-mode")){
+            icon.className = "fa-solid fa-sun";
+        } else {
+            icon.className = "fa-solid fa-moon";
+        }
+    }
+
+    if(localStorage.getItem("theme") === "dark"){
+        document.body.classList.add("dark-mode");
+    }
+
+    updateIcon();
+
+    themeBtn.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+
+        localStorage.setItem(
+            "theme",
+            document.body.classList.contains("dark-mode") ? "dark" : "light"
+        );
+
+        updateIcon();
+    });
+
+});
+
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+
+    const toggleBtn = document.getElementById("themeToggle");
+    const icon = toggleBtn.querySelector("i");
+
+    // load saved theme
+    if (localStorage.getItem("theme") === "dark") {
+        document.body.classList.add("dark-mode");
+        icon.classList.replace("fa-moon", "fa-sun");
+    }
+
+    toggleBtn.addEventListener("click", () => {
+
+        document.body.classList.toggle("dark-mode");
+
+        const isDark = document.body.classList.contains("dark-mode");
+
+        if (isDark) {
+            icon.classList.replace("fa-moon", "fa-sun");
+            localStorage.setItem("theme", "dark");
+        } else {
+            icon.classList.replace("fa-sun", "fa-moon");
+            localStorage.setItem("theme", "light");
+        }
+
+    });
+
+});
+</script>
+
+<script>
+    document.body.classList.toggle("dark-mode");
+</script>

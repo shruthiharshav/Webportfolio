@@ -27,56 +27,51 @@
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i class="fa fa-bars"></i>
         </a>
+         <!--language switch-->
+   
+<div class="lang-flags">
+    <img src="https://flagcdn.com/w40/gb.png" alt="English" onclick="setLanguage('en')" id="enFlag">
+    <img src="https://flagcdn.com/w40/se.png" alt="Swedish" onclick="setLanguage('sv')" id="svFlag">
+</div>
     </div>
 
 
 
     <section class="contact-section">
-        <h1 class="contact-heading">Kontakt</h1>
+        <h1 class="contact-heading" data-en="Contact" data-sv="Kontakt">Kontakt</h1>
         <form action="https://formsubmit.co/shruthiharshav@gmail.com" method="POST">
             <!--<div class="name-row">-->
             <div>
-                <p><label for="fname">Förnamn</label>
+                <p><label for="fname" data-en="FirstName" data-sv="Förnamn"></label>
                     <input type="text" id="fname" name="firstname" required minlength="2" pattern="[A-Za-zÅÄÖåäö\- ]+"
-                        placeholder="skriv ditt förnamn">
+                        data-placeholder-en="Write your firstname"data-placeholder-sv="Skriv ditt förnamn">
                 </p>
             </div>
 
 
             <div>
-                <p><label for="lname">Efternamn</label>
+                <p><label for="lname" data-en="AfterName" data-sv="Efternamn"></label>
                     <input type="text" id="lname" name="lname" required minlength="2" pattern="[A-Za-zÅÄÖåäö\- ]+"
-                        placeholder="Skriv ditt efter namn">
+                        data-placeholder-sv="Skriv ditt efter namn"
+                        data-placeholder-en="Write your efter name">
                 </p>
             </div>
 
             <div class="email-field">
-                <label for="email">E-Post</label>
-                <input type="email" id="email" name="email" required placeholder="name@gmail.com" oninvalid="this.setCustomValidity('Fyll i e-postadressen')">
+                <label for="email" data-en="E-Post" data-sv="E-Post"></label>
+                <input type="email" id="email" name="email" required data-placeholder-en="name@gmail.com" data-placeholder-sv="namn@gmail.com"oninvalid="this.setCustomValidity('Fyll i e-postadressen')">
                 <span class="validity"><i class="fa-solid fa-check"></i></span>
             </div>
 
             <div>
-                <label for="message">Meddelande</label>
-                <textarea id="message" name="message" rows="5" placeholder="Skriv ditt meddelande här" required
+                <label for="message" data-sv="Meddelande" data-en="Message"></label>
+                <textarea id="message" name="message" rows="5" data-placeholder-sv="Skriv ditt meddelande här" data-placeholder-en="Write your message here"required
                     minlength="20" maxlength="100"></textarea>
             </div>
             <div class="submitbutton">
-                <p><button onclick="myfunction()" type="submit">Send</button></p>
+                <p><button onclick="myfunction()" type="submit" data-en="Send" data-sv="Skicka">Skicka</button></p>
             </div>
 
-
-            <!--Spinner--
-            <div class="spinner">
-                <div class="spinner-item"></div>
-                <div class="spinner-item"></div>
-                <div class="spinner-item"></div>
-                <div class="spinner-item"></div>
-            </div>-->
-
-            
-
-     
         </form>
 
                <!---- <section>
@@ -117,8 +112,22 @@
             }
         }
     </script>-->
+<script>
+function setLanguage(lang) {
 
+    // text content
+    document.querySelectorAll("[data-en]").forEach(el => {
+        el.innerText = el.getAttribute("data-" + lang);
+    });
 
+    // placeholders
+    document.querySelectorAll("[data-placeholder-en]").forEach(el => {
+        el.placeholder = el.getAttribute("data-placeholder-" + lang);
+    });
+
+    localStorage.setItem("lang", lang);
+}
+</script>
  <script>
             function myFunction()
             {
@@ -130,6 +139,14 @@
             }
             } 
         </script>
+        
+<script>
+// load saved language
+window.onload = function () {
+    const lang = localStorage.getItem("lang") || "en";
+    setLanguage(lang);
+};
+</script>
 
 </body>
 

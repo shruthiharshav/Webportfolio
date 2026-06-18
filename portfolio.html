@@ -18,7 +18,7 @@
         <!--Navigation Links-->
         <div id="myLinks">
             <a href="index.html">Hem</a>
-            <a href="about.html">About</a>
+            <a href="about.html">Om mig</a>
             <a href="skills.html">Kunskap</a>
             <a href="contact.html">Kontakt</a>
             <a href="portfolio.html">Portfölj</a>
@@ -28,36 +28,53 @@
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i class="fa fa-bars"></i>
         </a>
+
+        <!--language switch-->
+   
+<div class="lang-flags">
+    <img src="https://flagcdn.com/w40/gb.png" alt="English" onclick="setLanguage('en')" id="enFlag">
+    <img src="https://flagcdn.com/w40/se.png" alt="Swedish" onclick="setLanguage('sv')" id="svFlag">
+</div>
     </div>
 
 
     <section>
-        <h3 class="portfolio-heading">Min Portfölj</h3>
+        <h3 class="portfolio-heading" data-en="My Portfolio" data-sv="Min Portfölj">Min Portfölj</h3>
         <div class="portfolio-container">
+
+            <div class="card">
+                <img src="Images/shotgun.jpg" alt="shooting gun" width="280px">
+                <p> <a href="https://github.com/shruthiharshav/ShootingGame" target="_blank" >Shot gun</a></p>
+                <p data-en="Shotgun programmin project" data-sv="Shotgun programering projekt">Shotgun programming project</p>       
+                <p> <a href="https://github.com/shruthiharshav/ShootingGame"><button style='font-size:18px'>LiveDemo<i
+                                class="fa-brands fa-github"></i></button></a></p>
+            </div>
+
+
             <div class="card">
                 <img src="Icons/Project images/iphone screenshot.jpg" alt="iphone max" width="280px">
-                <a href="https://shruthiharshav.github.io/HTML-Project/" targets="_blank">Iphone Website</a>
-                <p>Iphone 17 Pro Website</p>
-                <p> <a href="https://shruthiharshav.github.io/Apple-Website/"><button style='font-size:18px'>GitHub<i
+                <a href="https://shruthiharshav.github.io/HTML-Project/" targets="_blank" data-en="Iphone Website" data-sv="Iphone Websidan">Iphone Website</a>
+                <p data-en="Iphone 17 Pro Website" data-sv="Iphone 17 Pro Websidan">Iphone 17 Pro Website</p>
+                <p> <a href="https://shruthiharshav.github.io/Apple-Website/"><button style='font-size:18px';>LiveDemo<i
                                 class="fa-brands fa-github"></i></button></a></p>
             </div>
             <div class="card">
                 <img src="Icons/Project images/zooscreenshot.png" alt="tiger" width="280px">
-                <a href="https://shruthiharshav.github.io/HTML-Project/" targets="_blank">Zoo Website</a>
-                <p>Systementor Zoo Website</p>
-                <p> <a href="https://shruthiharshav.github.io/HTML-Project/"><button style='font-size:18px'>GitHub<i
+                <a href="https://shruthiharshav.github.io/HTML-Project/" targets="_blank" data-en="Zoo Website" data-sv="Zoo Website">Zoo Website</a>
+                <p data-en="Systementor Zoo Website" data-sv="Systementor Zoo Websidan">Systementor Zoo Website</p>
+                <p> <a href="https://shruthiharshav.github.io/HTML-Project/"><button style='font-size:18px'>LiveDemo<i
                                 class="fa-brands fa-github"></i></button></a></p>
             </div>
 
             <div class="card">
-                <img src="Icons/Project images/unloading.jpg" alt="project coming soon" width="280px">
-                <p>kommer snart</p>
+                <img src="Icons/cloud-computing.jpg" alt="azure devops" width="280px">
+                <a href="https://github.com/shruthiharshav/AzureFreakyFashion" targets="_blank" data-en=".Net development with azure devops" data-sv=".Net utveckling med azure devops">.Net development with AzureDevops</a>
+                <p data-en="Here i have built a .Net application with Azure Devops" data-sv="Här jag har byggat en .Net-applikation med Azure DevOps.">Här jag har byggat en .Net-applikation med Azure DevOps.</p>
+                <p> <a href="https://github.com/shruthiharshav/AzureFreakyFashion"><button style='font-size:18px'>LiveDemo<i
+                                class="fa-brands fa-github"></i></button></a></p>
             </div>
 
-            <div class="card">
-                <img src="Icons/Project images/unloading.jpg" alt="project coming soon" width="280px">
-                <p>kommer snart</p>
-            </div>
+            
 
             <script>
                 function myFunction() {
@@ -69,6 +86,99 @@
                     }
                 } 
             </script>
+
+            
+          <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+              let i;
+              let slides = document.getElementsByClassName("mySlides");
+              let dots = document.getElementsByClassName("dot");
+              if (n > slides.length) { slideIndex = 1 }
+              if (n < 1) { slideIndex = slides.length }
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+              }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex - 1].style.display = "block";
+              dots[slideIndex - 1].className += " active";
+            }
+          </script>
+    </section>
+  </div>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myLinks");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block"
+      }
+  } 
+  </script>
+
+  
+      <script>
+function setLanguage(lang) {
+    document.querySelectorAll("[data-en]").forEach(el => {
+        el.innerText = el.getAttribute("data-" + lang);
+    });
+
+    localStorage.setItem("lang", lang);
+
+    const slider = document.querySelector(".slider");
+
+    if (lang === "en") {
+        slider.style.left = "4px";
+    } else {
+        slider.style.left = "46px";
+    }
+}
+
+window.onload = function () {
+    setLanguage(localStorage.getItem("lang") || "en");
+};
+</script>
+      <script>
+        
+function setLanguage(lang) {
+    // change text
+    document.querySelectorAll("[data-en]").forEach(el => {
+        el.innerText = el.getAttribute("data-" + lang);
+    });
+
+    localStorage.setItem("lang", lang);
+
+    // remove active styles
+    document.getElementById("enFlag").classList.remove("lang-active");
+    document.getElementById("svFlag").classList.remove("lang-active");
+
+    // set active flag
+    if (lang === "en") {
+        document.getElementById("enFlag").classList.add("lang-active");
+    } else {
+        document.getElementById("svFlag").classList.add("lang-active");
+    }
+}
+
+// load saved language
+window.onload = function () {
+    const lang = localStorage.getItem("lang") || "en";
+    setLanguage(lang);
+};
+</script>
 
 </body>
 
