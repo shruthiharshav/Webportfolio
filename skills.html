@@ -15,26 +15,29 @@
     <div class="topnav">
         <a class="active">SHRUTHI</a>
         <!--Navigation Links-->
-        <div id="myLinks">
-            <a href="index.html">Hem</a>
-            <a href="about.html">Om mig</a>
-            <a href="kunskap.html">Kunskap</a>
-            <a href="contact.html">Kontakt</a>
-            <a href="portfolio.html">Portfölj</a>
-            <a href="reference.html">Referens</a>
+
+        <div class="nav-right">
+            <!--language switch-->
+
+            <div class="lang-flags">
+                <img src="https://flagcdn.com/w40/gb.png" alt="English" onclick="setLanguage('en')" id="enFlag">
+                <img src="https://flagcdn.com/w40/se.png" alt="Swedish" onclick="setLanguage('sv')" id="svFlag">
+            </div>
+
+            <div id="myLinks">
+                <a href="index.html">Hem</a>
+                <a href="about.html">Om mig</a>
+                <a href="kunskap.html">Kunskap</a>
+                <a href="contact.html">Kontakt</a>
+                <a href="portfolio.html">Portfölj</a>
+                <a href="reference.html">Referens</a>
+            </div>
+            <!--Hamburger Icon-->
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
         </div>
-        <!--Hamburger Icon-->
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
-        </a>
     </div>
-    
-    <!--language switch-->
-   
-<div class="lang-flags">
-    <img src="https://flagcdn.com/w40/gb.png" alt="English" onclick="setLanguage('en')" id="enFlag">
-    <img src="https://flagcdn.com/w40/se.png" alt="Swedish" onclick="setLanguage('sv')" id="svFlag">
-</div>
 
     <section class="container2">
         <div class="skills-section">
@@ -83,64 +86,64 @@
                 } 
             </script>
 
-  
-      <script>
-function setLanguage(lang) {
-    document.querySelectorAll("[data-en]").forEach(el => {
-        el.innerText = el.getAttribute("data-" + lang);
-    });
 
-    localStorage.setItem("lang", lang);
+            <script>
+                function setLanguage(lang) {
+                    document.querySelectorAll("[data-en]").forEach(el => {
+                        el.innerText = el.getAttribute("data-" + lang);
+                    });
 
-    const slider = document.querySelector(".slider");
+                    localStorage.setItem("lang", lang);
 
-    if (lang === "en") {
-        slider.style.left = "4px";
-    } else {
-        slider.style.left = "46px";
-    }
-}
+                    const slider = document.querySelector(".slider");
 
-window.onload = function () {
-    setLanguage(localStorage.getItem("lang") || "en");
-};
-</script>
-      <script>
-        
-function setLanguage(lang) {
-    // change text
-    document.querySelectorAll("[data-en]").forEach(el => {
-        el.innerText = el.getAttribute("data-" + lang);
-    });
+                    if (lang === "en") {
+                        slider.style.left = "4px";
+                    } else {
+                        slider.style.left = "46px";
+                    }
+                }
 
-    localStorage.setItem("lang", lang);
+                window.onload = function () {
+                    setLanguage(localStorage.getItem("lang") || "en");
+                };
+            </script>
+            <script>
 
-    // remove active styles
-    document.getElementById("enFlag").classList.remove("lang-active");
-    document.getElementById("svFlag").classList.remove("lang-active");
+                function setLanguage(lang) {
+                    // change text
+                    document.querySelectorAll("[data-en]").forEach(el => {
+                        el.innerText = el.getAttribute("data-" + lang);
+                    });
 
-    // set active flag
-    if (lang === "en") {
-        document.getElementById("enFlag").classList.add("lang-active");
-    } else {
-        document.getElementById("svFlag").classList.add("lang-active");
-    }
-}
+                    localStorage.setItem("lang", lang);
 
-// load saved language
-window.onload = function () {
-    const lang = localStorage.getItem("lang") || "en";
-    setLanguage(lang);
-};
+                    // remove active styles
+                    document.getElementById("enFlag").classList.remove("lang-active");
+                    document.getElementById("svFlag").classList.remove("lang-active");
 
-            <!--<script>
-    window.addEventListener("DOMContentLoaded", () => {
-        const bars = document.querySelectorAll(".skills");
-        bars.forEach(bar => {
-            const percent = bar.innerText.replace('%','');
-            bar.style.width = percent + '%'; 
-        })
-})-->
+                    // set active flag
+                    if (lang === "en") {
+                        document.getElementById("enFlag").classList.add("lang-active");
+                    } else {
+                        document.getElementById("svFlag").classList.add("lang-active");
+                    }
+                }
+
+                // load saved language
+                window.onload = function () {
+                    const lang = localStorage.getItem("lang") || "en";
+                    setLanguage(lang);
+                };
+
+                <!--<script>
+        window.addEventListener("DOMContentLoaded", () => {
+            const bars = document.querySelectorAll(".skills");
+            bars.forEach(bar => {
+                const percent = bar.innerText.replace('%','');
+                bar.style.width = percent + '%'; 
+            })
+    })-->
             </script>
 </body>
 

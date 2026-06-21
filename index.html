@@ -6,23 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Webportfolio</title>
     <link rel="stylesheet" href="style.css">
-   
+
     <script src="https://kit.fontawesome.com/3eb723f157.js" crossorigin="anonymous"></script>
     <link rel="icon" type="image/x-icon" sizes="32x32" href="Icons/S.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-      <script src="weather.js" defer></script>
-        <script src="webportfolio.js" defer></script>
+    <script src="weather.js" defer></script>
+    <script src="webportfolio.js" defer></script>
 
 </head>
-<body> 
-    
 
-        <!---LEFT--->
+<body>
+    <!---LEFT--->
+
+    <div class=language switch>
         <div class="topnav">
             <a class="logo">SHRUTHI</a>
-        
 
-            <!---- Language Switch 
+            <!-- Navigation Links-->
+            <div class="nav-right">
+                <div class="lang-flags">
+                    <img src="https://flagcdn.com/w40/gb.png" alt="English" onclick="setLanguage('en')" id="enFlag">
+                    <img src="https://flagcdn.com/w40/se.png" alt="Swedish" onclick="setLanguage('sv')" id="svFlag">
+                </div>
+                <ul id="myLinks">
+                    <!--language switch-->
+                    
+                    <a href="index.html" data-en="Home" data-sv="Hem"></a>
+                    <a href="about.html" data-en="About Me" data-sv="Om mig"></a>
+                    <a href="skills.html" data-en="Skills" data-sv="Kunskap"></a>
+                    <a href="contact.html" data-en="Contact" data-sv="Kontact"></a>
+                    <a href="portfolio.html" data-en="Portfolio" data-sv="Portfölj"></a>
+                    <a href="reference.html" data-en="Reference" data-sv="Referens">Referens</a>
+                </ul>
+
+                <!---- Language Switch 
         <div class="lang-switch">
             <span class="lang active">SV</span>
             <span>|</span>
@@ -30,167 +47,146 @@
             <span><button id="themeToggle" class="icon-btn"><i class="fa-solid fa-circle-half-stroke"></i></button></span>
       </div>
 </div>-->
-            
-         <!-- Navigation Links -->
-          <div class="nav-right">
-                    <div class="lang-flags">
-            <img src="https://flagcdn.com/w40/gb.png" alt="English" onclick="setLanguage('en')" id="enFlag">
-            <img src="https://flagcdn.com/w40/se.png" alt="Swedish" onclick="setLanguage('sv')" id="svFlag">
+
+                <!--Hamburger Icon-->
+
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+
+            </div>
         </div>
-        <ul  id="myLinks">
-            <!--language switch-->  
-         <li>
-         </li>
-           <li><a href="index.html" data-en="Home" data-sv="Hem"></a></li> 
-            <li><a href="about.html" data-en="About Me" data-sv="Om mig"></a></li>
-            <li><a href="skills.html" data-en="Skills" data-sv="Kunskap"></a></li>
-            <li><a href="contact.html" data-en="Contact" data-sv="Kontact"></a></li>
-            <li><a href="portfolio.html" data-en="Portfolio" data-sv="Portfölj"></a></li>
-            <li><a href="reference.html" data-en="Reference" data-sv="Referens">Referens</a></li>
-             
-        
-        </ul>
-     
-        
-  
 
-        <!--Hamburger Icon-->
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-         <i class="fa fa-bars"></i>
-         </a>
-
-         
-         
-         <!--Navigation Links-->
-        
-    </div>
+        <!--Navigation Links-->
         <div class="hero-image">
-        <div class="hero-text">
-            <div class="container">
-              <div class="hero-buttons">
-           
-              <a href="Documents/SHRUTHI PERIASAMY  CV updated .Net.pdf" 
-               class="hero-btn" data-en="Download" data-sv="Ladda ner CV">
-                <i class="fa-solid fa-download"></i></a>
+            <div class="hero-text">
+                <div class="container">
+                    <div class="hero-buttons">
 
-                <a href="contact.html" class="hero-btn" data-en="Contact" data-sv="Kontakt"><i class="fa-solid fa-address-book"></i></a> 
-                <a href="about.html" class="hero-btn" data-en="About Me" data-sv="Om mig"></a>
-</div>
-</div>
+                        <a href="Documents/SHRUTHI PERIASAMY  CV updated .Net.pdf" class="hero-btn"
+                            data-en="Download CV" data-sv="Ladda ner CV">
+                            <i class="fa-solid fa-download"></i></a>
+
+                        <a href="contact.html" class="hero-btn" data-en="Contact" data-sv="Kontakt"><i
+                                class="fa-solid fa-address-book"></i></a>
+                        <a href="about.html" class="hero-btn" data-en="About Me" data-sv="Om mig"></a>
+                    </div>
+                </div>
+            </div>
         </div>
-        </div></div>
 
-<!-- Skills -->
+        <!-- Skills -->
 
-<div class="skills-train-wrapper">
-  <div class="skills-train">
+        <div class="skills-train-wrapper">
+            <div class="skills-train">
 
-    <!-- FIRST SET -->
-    <div class="skill"><i class="devicon-html5-plain colored"></i>HTML</div>
-    <div class="skill"><i class="devicon-css3-plain colored"></i>CSS</div>
-    <div class="skill"><i class="devicon-javascript-plain colored"></i>JS</div>
-    <div class="skill"><i class="devicon-csharp-plain colored"></i>C#</div>
-    <div class="skill"><i class="devicon-dot-net-plain colored"></i>.NET</div>
-    <div class="skill"><i class="devicon-azure-plain colored"></i>Azure</div>
-    <div class="skill"><i class="devicon-github-original"></i>GitHub</div>
-    <div class="skill"><i class="devicon-microsoftsqlserver-plain colored"></i>SQL</div>
-    <div class="skill"><i class="devicon-docker-plain colored"></i>Docker</div>
+                <!-- FIRST SET -->
+                <div class="skill"><i class="devicon-html5-plain colored"></i>HTML</div>
+                <div class="skill"><i class="devicon-css3-plain colored"></i>CSS</div>
+                <div class="skill"><i class="devicon-javascript-plain colored"></i>JS</div>
+                <div class="skill"><i class="devicon-csharp-plain colored"></i>C#</div>
+                <div class="skill"><i class="devicon-dot-net-plain colored"></i>.NET</div>
+                <div class="skill"><i class="devicon-azure-plain colored"></i>Azure</div>
+                <div class="skill"><i class="devicon-github-original"></i>GitHub</div>
+                <div class="skill"><i class="devicon-microsoftsqlserver-plain colored"></i>SQL</div>
+                <div class="skill"><i class="devicon-docker-plain colored"></i>Docker</div>
 
-    <!-- SECOND SET (FOR LOOP) -->
-    <div class="skill"><i class="devicon-html5-plain colored"></i>HTML</div>
-    <div class="skill"><i class="devicon-css3-plain colored"></i>CSS</div>
-    <div class="skill"><i class="devicon-javascript-plain colored"></i>JS</div>
-    <div class="skill"><i class="devicon-csharp-plain colored"></i>C#</div>
-    <div class="skill"><i class="devicon-dot-net-plain colored"></i>.NET</div>
-    <div class="skill"><i class="devicon-azure-plain colored"></i>Azure</div>
-    <div class="skill"><i class="devicon-github-original"></i>GitHub</div>
-    <div class="skill"><i class="devicon-microsoftsqlserver-plain colored"></i>SQL</div>
-    <div class="skill"><i class="devicon-docker-plain colored"></i>Docker</div>
+                <!-- SECOND SET (FOR LOOP) -->
+                <div class="skill"><i class="devicon-html5-plain colored"></i>HTML</div>
+                <div class="skill"><i class="devicon-css3-plain colored"></i>CSS</div>
+                <div class="skill"><i class="devicon-javascript-plain colored"></i>JS</div>
+                <div class="skill"><i class="devicon-csharp-plain colored"></i>C#</div>
+                <div class="skill"><i class="devicon-dot-net-plain colored"></i>.NET</div>
+                <div class="skill"><i class="devicon-azure-plain colored"></i>Azure</div>
+                <div class="skill"><i class="devicon-github-original"></i>GitHub</div>
+                <div class="skill"><i class="devicon-microsoftsqlserver-plain colored"></i>SQL</div>
+                <div class="skill"><i class="devicon-docker-plain colored"></i>Docker</div>
 
-  </div>
-</div>
-
-
-    <div id="weather">
-
-    </div>
-
-    <div class="footer">
-        <h3 data-en="Follow me:" data-sv="Följ mig:"></h3>
-        <div class="footer-img">
-            <a href="https://github.com/shruthiharshav"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/shruthi-periasamy-7180b465/"><i class="fa-brands fa-square-linkedin"></i></a>
-            <p class="copyright">&copy; Copyrights <span><strong data-en="SHRUTHI All Rights Reserved" data-sv="SHRUTHI Alla rättigheter förbehållna"></strong></span></p>
+            </div>
         </div>
 
 
+        <div id="weather">
 
-        
+        </div>
 
- <script>
-            function myFunction()
-            {
-            var x = document.getElementById("myLinks");
-            if (x.style.display === "block") {
-            x.style.display = "none";
-            } else {
-            x.style.display = "block";
-            }
-            } 
-        </script>
+        <div class="footer">
+            <h3 data-en="Follow me:" data-sv="Följ mig:"></h3>
+            <div class="footer-img">
+                <a href="https://github.com/shruthiharshav"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/shruthi-periasamy-7180b465/"><i
+                        class="fa-brands fa-square-linkedin"></i></a>
+                <p class="copyright">&copy; Copyrights <span><strong data-en="SHRUTHI All Rights Reserved"
+                            data-sv="SHRUTHI Alla rättigheter förbehållna"></strong></span></p>
+            </div>
 
-      <script>
-function setLanguage(lang) {
-    document.querySelectorAll("[data-en]").forEach(el => {
-        el.innerText = el.getAttribute("data-" + lang);
-    });
 
-    localStorage.setItem("lang", lang);
 
-    const slider = document.querySelector(".slider");
 
-    if (lang === "en") {
-        slider.style.left = "4px";
-    } else {
-        slider.style.left = "46px";
-    }
-}
 
-window.onload = function () {
-    setLanguage(localStorage.getItem("lang") || "en");
-};
-</script>
-      <script>
-        
-function setLanguage(lang) {
-    // change text
-    document.querySelectorAll("[data-en]").forEach(el => {
-        el.innerText = el.getAttribute("data-" + lang);
-    });
+            <script>
+                function myFunction() {
+                    var x = document.getElementById("myLinks");
+                    if (x.style.display === "block") {
+                        x.style.display = "none";
+                    } else {
+                        x.style.display = "block";
+                    }
+                } 
+            </script>
 
-    localStorage.setItem("lang", lang);
+            <script>
+                function setLanguage(lang) {
+                    document.querySelectorAll("[data-en]").forEach(el => {
+                        el.innerText = el.getAttribute("data-" + lang);
+                    });
 
-    // remove active styles
-    document.getElementById("enFlag").classList.remove("lang-active");
-    document.getElementById("svFlag").classList.remove("lang-active");
+                    localStorage.setItem("lang", lang);
 
-    // set active flag
-    if (lang === "en") {
-        document.getElementById("enFlag").classList.add("lang-active");
-    } else {
-        document.getElementById("svFlag").classList.add("lang-active");
-    }
-}
+                    const slider = document.querySelector(".slider");
 
-// load saved language
-window.onload = function () {
-    const lang = localStorage.getItem("lang") || "en";
-    setLanguage(lang);
-};
-</script>
+                    if (lang === "en") {
+                        slider.style.left = "4px";
+                    } else {
+                        slider.style.left = "46px";
+                    }
+                }
 
-      
-<!-----
+                window.onload = function () {
+                    setLanguage(localStorage.getItem("lang") || "en");
+                };
+            </script>
+            <script>
+
+                function setLanguage(lang) {
+                    // change text
+                    document.querySelectorAll("[data-en]").forEach(el => {
+                        el.innerText = el.getAttribute("data-" + lang);
+                    });
+
+                    localStorage.setItem("lang", lang);
+
+                    // remove active styles
+                    document.getElementById("enFlag").classList.remove("lang-active");
+                    document.getElementById("svFlag").classList.remove("lang-active");
+
+                    // set active flag
+                    if (lang === "en") {
+                        document.getElementById("enFlag").classList.add("lang-active");
+                    } else {
+                        document.getElementById("svFlag").classList.add("lang-active");
+                    }
+                }
+
+                // load saved language
+                window.onload = function () {
+                    const lang = localStorage.getItem("lang") || "en";
+                    setLanguage(lang);
+                };
+            </script>
+
+
+            <!-----
         <script>
   const btn = document.getElementById("langBtn");
 
@@ -288,7 +284,9 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.classList.toggle("dark-mode");
 </script>
 --->
-    
+
+
+
 </body>
 
 </html>

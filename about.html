@@ -14,6 +14,11 @@
   <div class="topnav">
     <a class="active">SHRUTHI</a>
     <!--Navigation Links-->
+    <div class="nav-right">
+      <div class="lang-flags">
+        <img src="https://flagcdn.com/w40/gb.png" alt="English" onclick="setLanguage('en')" id="enFlag">
+        <img src="https://flagcdn.com/w40/se.png" alt="Swedish" onclick="setLanguage('sv')" id="svFlag">
+      </div>
     <div id="myLinks">
       <a href="index.html">Hem</a>
       <a href="about.html">Om mig</a>
@@ -21,6 +26,7 @@
       <a href="contact.html">Kontakt</a>
       <a href="portfolio.html">Portfölj</a>
       <a href="reference.html">Referens</a>
+
     </div>
     <!--Hamburger Icon-->
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -28,10 +34,7 @@
     </a>
 
     <!--language switch-->
-   
-<div class="lang-flags">
-    <img src="https://flagcdn.com/w40/gb.png" alt="English" onclick="setLanguage('en')" id="enFlag">
-    <img src="https://flagcdn.com/w40/se.png" alt="Swedish" onclick="setLanguage('sv')" id="svFlag">
+
 </div>
   </div>
 
@@ -42,21 +45,28 @@
           <div class="numbertext"></div>
           <h2 class="slidetext1" data-en="Who I am?" data-sv="Vem är jag?"></h2>
           <p><img src="Images/shruthipurple3.jpeg" alt="Image Of Shruthi"></p>
-          <p class="slidetext1" >
+          <p class="slidetext1">
           <p id="aboutText"
-          data-sv="Jag heter Shruthi, och studerar för närvarande .Net-utveckling med molnteknologier på Jensen,"
-          data-en="My name is Shruthi, and I am currently studying .Net Development with Cloud Technologies at Jensen,">Jag heter Shruthi, och studerar för närvarande .Net-utveckling med molnteknologier på Jensen</p>
-              <p data-sv= "där jag bygger starka färdigheter inom modern programvaruutveckling och molnbaserade lösningar."
-              data-en="where I am building strong skills in modern software development and cloud-based solutions">där jag bygger starka färdigheter inom modern programvaruutveckling och molnbaserade lösningar.</p> 
-               <p data-sv="brinner för att skapa effektiva och skalbara applikationer samt för att utforska de senaste"
-               data-en="I am passionate about creating efficient and scalable applications while exploring the latest">brinner för att skapa effektiva och skalbara applikationer samt för att utforska de senaste</p>
-               <p data-sv="technologierna som driver den digitala världen.Mitt mål är att kombinera min kunskap om .Net-ramverk"
-               data-en="technologies that drive the digital world. My goal is to combine my knowledge of .NET frameworks">technologierna som driver den digitala världen.Mitt mål är att kombinera min kunskap om .Net-ramverk</p>
-                <p data-sv="och molnplattformar för att utveckla innovativa lösningar som verkligen gör skillnad."
-                data-en="and cloudplatforms to develop innovative solutions that make a real impact ">och molnplattformar för att utveckla innovativa lösningar som verkligen gör skillnad.</p>
-                <p data-sv="Jag söker LIA praktik i .Net-utveckling med molnteknologier under  perioden 5th Oktober 2026 till 23rd April 2027."
-                data-en="I am searching LIA internship in .Net-development with cloudtechnologies under the period 5th October 2026 to 23rd April 2027.">Jag söker LIA praktik i .Net-utveckling med molnteknologier under  perioden 5th Oktober 2026 till 23rd April 2027.</p>
- 
+            data-sv="Jag heter Shruthi, och studerar för närvarande .Net-utveckling med molnteknologier på Jensen,"
+            data-en="My name is Shruthi, and I am currently studying .Net Development with Cloud Technologies at Jensen,">
+            Jag heter Shruthi, och studerar för närvarande .Net-utveckling med molnteknologier på Jensen</p>
+          <p data-sv="där jag bygger starka färdigheter inom modern programvaruutveckling och molnbaserade lösningar."
+            data-en="where I am building strong skills in modern software development and cloud-based solutions">där jag
+            bygger starka färdigheter inom modern programvaruutveckling och molnbaserade lösningar.</p>
+          <p data-sv="brinner för att skapa effektiva och skalbara applikationer samt för att utforska de senaste"
+            data-en="I am passionate about creating efficient and scalable applications while exploring the latest">
+            brinner för att skapa effektiva och skalbara applikationer samt för att utforska de senaste</p>
+          <p data-sv="technologierna som driver den digitala världen.Mitt mål är att kombinera min kunskap om .Net-ramverk"
+            data-en="technologies that drive the digital world. My goal is to combine my knowledge of .NET frameworks">
+            technologierna som driver den digitala världen.Mitt mål är att kombinera min kunskap om .Net-ramverk</p>
+          <p data-sv="och molnplattformar för att utveckla innovativa lösningar som verkligen gör skillnad."
+            data-en="and cloudplatforms to develop innovative solutions that make a real impact ">och molnplattformar
+            för att utveckla innovativa lösningar som verkligen gör skillnad.</p>
+          <p data-sv="Jag söker LIA praktik i .Net-utveckling med molnteknologier under  perioden 5th Oktober 2026 till 23rd April 2027."
+            data-en="I am searching LIA internship in .Net-development with cloudtechnologies under the period 5th October 2026 to 23rd April 2027.">
+            Jag söker LIA praktik i .Net-utveckling med molnteknologier under perioden 5th Oktober 2026 till 23rd April
+            2027.</p>
+
         </div>
         <!----
         <div class="mySlides fade">
@@ -89,34 +99,34 @@
             <span class="dot" onclick="currentSlide(3)"></span>
           </div>-->
 
-          <script>
-            let slideIndex = 1;
-            showSlides(slideIndex);
+        <script>
+          let slideIndex = 1;
+          showSlides(slideIndex);
 
-            function plusSlides(n) {
-              showSlides(slideIndex += n);
-            }
+          function plusSlides(n) {
+            showSlides(slideIndex += n);
+          }
 
-            function currentSlide(n) {
-              showSlides(slideIndex = n);
-            }
+          function currentSlide(n) {
+            showSlides(slideIndex = n);
+          }
 
-            function showSlides(n) {
-              let i;
-              let slides = document.getElementsByClassName("mySlides");
-              let dots = document.getElementsByClassName("dot");
-              if (n > slides.length) { slideIndex = 1 }
-              if (n < 1) { slideIndex = slides.length }
-              for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-              }
-              for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-              }
-              slides[slideIndex - 1].style.display = "block";
-              dots[slideIndex - 1].className += " active";
+          function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
             }
-          </script>
+            for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+          }
+        </script>
     </section>
   </div>
   <script>
@@ -127,59 +137,59 @@
       } else {
         x.style.display = "block"
       }
-  } 
+    } 
   </script>
 
-  
-      <script>
-function setLanguage(lang) {
-    document.querySelectorAll("[data-en]").forEach(el => {
+
+  <script>
+    function setLanguage(lang) {
+      document.querySelectorAll("[data-en]").forEach(el => {
         el.innerText = el.getAttribute("data-" + lang);
-    });
+      });
 
-    localStorage.setItem("lang", lang);
+      localStorage.setItem("lang", lang);
 
-    const slider = document.querySelector(".slider");
+      const slider = document.querySelector(".slider");
 
-    if (lang === "en") {
+      if (lang === "en") {
         slider.style.left = "4px";
-    } else {
+      } else {
         slider.style.left = "46px";
+      }
     }
-}
 
-window.onload = function () {
-    setLanguage(localStorage.getItem("lang") || "en");
-};
-</script>
-      <script>
-        
-function setLanguage(lang) {
-    // change text
-    document.querySelectorAll("[data-en]").forEach(el => {
+    window.onload = function () {
+      setLanguage(localStorage.getItem("lang") || "en");
+    };
+  </script>
+  <script>
+
+    function setLanguage(lang) {
+      // change text
+      document.querySelectorAll("[data-en]").forEach(el => {
         el.innerText = el.getAttribute("data-" + lang);
-    });
+      });
 
-    localStorage.setItem("lang", lang);
+      localStorage.setItem("lang", lang);
 
-    // remove active styles
-    document.getElementById("enFlag").classList.remove("lang-active");
-    document.getElementById("svFlag").classList.remove("lang-active");
+      // remove active styles
+      document.getElementById("enFlag").classList.remove("lang-active");
+      document.getElementById("svFlag").classList.remove("lang-active");
 
-    // set active flag
-    if (lang === "en") {
+      // set active flag
+      if (lang === "en") {
         document.getElementById("enFlag").classList.add("lang-active");
-    } else {
+      } else {
         document.getElementById("svFlag").classList.add("lang-active");
+      }
     }
-}
 
-// load saved language
-window.onload = function () {
-    const lang = localStorage.getItem("lang") || "en";
-    setLanguage(lang);
-};
-</script>
+    // load saved language
+    window.onload = function () {
+      const lang = localStorage.getItem("lang") || "en";
+      setLanguage(lang);
+    };
+  </script>
 </body>
 
 </html>
