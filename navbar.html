@@ -17,29 +17,29 @@
             <div class="logo">SHRUTHI</div>
 
             <!-- Navigation Links -->
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="#Home">Hem</a></li>
-                <li><a href="#about">Om mig</a></li>
-                <li><a href="#knowledge">Kunskap</a></li>
-                <li><a href="#contact">Kontakt</a></li>
-                <li><a href="#portfolio">Portfölj</a></li>
-                <li><a href="#reference">Referens</a></li>
-            </ul>
+            <div class="nav-right">
+                <img src="https://flagcdn.com/w40/gb.png" alt="English" onclick="setLanguage('en')" id="enFlag">
+                <img src="https://flagcdn.com/w40/se.png" alt="Swedish" onclick="setLanguage('sv')" id="svFlag">
 
-            <!----
+                <ul class="nav-menu" id="navMenu">
+                <a href="index.html" data-en="Home" data-sv="Hem"></a>
+                <a href="about.html" data-en="About Me" data-sv="Om mig"></a>
+                <a href="skills.html" data-en="Knowledge" data-sv="Kunskap"></a>
+                <a href="contact.html" data-en="Contact" data-sv="Kontact"></a>
+                <a href="portfolio.html" data-en="Portfolio" data-sv="Portfölj"></a>
+                <a href="reference.html" data-en="Reference" data-sv="Referens"></a>
+                </ul>
+
+                <!----
         <div class="lang-switch">
             <span id="enBtn" onclick="setLanguage('en')">EN</span>
             <span>|</span>
             <span id="svBtn" onclick="setLanguage('sv')">SV</span>
         </div>-->
-            <!-- Hamburger -->
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-
-        </div>
+                <!-- Hamburger -->
+                < <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
     </nav>
 
     <!--Top Navigation Menu-->
