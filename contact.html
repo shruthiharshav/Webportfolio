@@ -74,7 +74,8 @@
                     <label for="email" data-en="E-Mail" data-sv="E-Post"></label>
                     <input type="email" id="email" name="email" required data-placeholder-en="name@gmail.com"
                         data-placeholder-sv="namn@gmail.com"
-                        oninvalid="this.setCustomValidity('Fyll i e-postadressen')">
+                        oninvalid="this.setCustomValidity((localStorage.getItem('lang') || 'en') === 'en' ? 'Please enter a valid email address' : 'Fyll i e-postadressen')"
+                        oninput="this.setCustomValidity('')">
                     <span class="validity"><i class="fa-solid fa-check"></i></span>
                 </div>
 
