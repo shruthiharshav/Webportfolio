@@ -441,6 +441,13 @@ text-align: center;
     display:grid;
 
 }
+
+.highlight
+{
+     color: yellow;
+     font-weight: bold;
+
+}
 .topnav
 {
     display: flex;

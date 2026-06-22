@@ -112,6 +112,22 @@
     </section>
 
     <script>
+        function setLanguage(lang) {
+
+            // text content
+            document.querySelectorAll("[data-en]").forEach(el => {
+                el.innerText = el.getAttribute("data-" + lang);
+            });
+
+            localStorage.setItem("lang", lang);
+        }
+
+        window.onload = function () {
+            const lang = localStorage.getItem('lang') || "en";
+            setLanguage(lang);
+        }
+    </script>
+    <script>
         function myFunction() {
             var x = document.getElementById("myLinks");
             if (x.style.display === "block") {
