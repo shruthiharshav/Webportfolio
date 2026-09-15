@@ -733,15 +733,20 @@ textarea::placeholder
 
 .portfolio-container
 {
+width: 90%;
+max-width: 1200px;
+margin: 60px auto;
 margin-top: 60px;
 background-color: var(--background-color);/*#f1f1f1; /*#CFFFE5;*/ /*#f8d6b0;*/
 display: grid;
-grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-gap: 0px; /*0px*/
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 20px; /*0px*/
 color: black;
 margin-left: 35px;
 margin-right: 35px;
-box-shadow: 2px 2px 2px 2px #7aa89a;
+/*box-shadow: 2px 2px 2px 2px #7aa89a;
+border-radius:10px;
+box-sizing: border-box;*/
 
 }
 
@@ -750,19 +755,30 @@ box-shadow: 2px 2px 2px 2px #7aa89a;
 {
    
     height: 360px;
+    height:auto;
+    padding-bottom:20px;
     /*width: 300px;*/
     border-radius: 2px;
     border: 20px solid var(--navbar-color);
     background-color: var(--background-color);
     color:azure;
+    transition:.3s;
+    overflow: hidden;
 
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 25px rgba(0,0,0,.2);
 }
 
 .card img
 {
     width: 100%;
-    height: 200px;
+    height: 220px;
     border-radius: 4px;
+    height:220px;
+    object-fit:cover;
 
 }
 
@@ -777,6 +793,23 @@ box-shadow: 2px 2px 2px 2px #7aa89a;
         max-width: 100%;
     }
     
+}
+/*Portfolio badges */
+.tech-stack{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin:15px 0;
+}
+
+.tech-stack span{
+    background:#7aa89a;
+    color:white;
+    padding:6px 12px;
+    border-radius:10px;
+    border:2px solid whitesmoke;
+    font-size:13px;
+    font-weight:600;
 }
 
 
